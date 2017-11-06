@@ -1,11 +1,10 @@
 # MyLearnNote
 
 
-* [WVJSBridge](WebViewJavaScriptBridge/WVJSBridge.md)
-* [Plantuml](Plantuml/Plantuml.md)
+* [WVJSBridge](index/WebViewJavaScriptBridge/WVJSBridge.md)
+* [Plantuml](index/Plantuml/Plantuml.md)
+* [一些笔记](index/iOS/dictionary.md)
 
-
-![](WebViewJavaScriptBridge/plantumlTest.png)
 
 ```plantuml
 @startuml
