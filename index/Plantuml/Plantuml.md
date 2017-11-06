@@ -17,6 +17,21 @@
 .. 虚线
  >  "-","." 的数量 可以表示长度
 
+
+ ```plantuml
+
+@startuml
+
+class ClassA { 
+  
+}
+
+
+
+@enduml
+
+ ```
+
 ```
 ```plantuml
 
