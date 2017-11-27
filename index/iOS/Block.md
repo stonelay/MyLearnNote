@@ -1,5 +1,31 @@
 # Block part
 
+## block 
+Block_private.h文件中对block的相关结构体的真实定义：
+
+```objc
+/* Revised new layout. */
+struct Block_descriptor {
+    unsigned long int reserved;         // 预留变量
+    unsigned long int size;
+    void (*copy)(void *dst, void *src); //辅助拷贝，处理block范围外的变量时使用
+    void (*dispose)(void *);            //销毁函数，处理block范围外的变量时使用
+};
+
+
+struct Block_layout {
+    void *isa;
+    int flags;  //标志变量，在实现block的内部操作时会用到
+    int reserved;
+    void (*invoke)(void *, ...); //block执行时调用的函数指针，block定义时内部的执行代码都在这个函数中
+    struct Block_descriptor *descriptor;
+    /* Imported variables. */
+};
+
+// block就是一个里面存储了指向函数体中包含定义block时的代码块的函数指针，以及block外部上下文变量等信息的结构体。
+
+```
+
 ## pre 
 首先 需要清楚
 
@@ -68,3 +94,4 @@ block = ^ {
 * 带__block的自动变量 和 静态变量 就是直接地址访问。所以在Block里面可以直接改变变量的值。
 
 局部变量能直接访问地址的原因是，\__block封装成结构体 拷贝到 block 堆上，\__forwarding 指针指向堆上的__block结构体
+

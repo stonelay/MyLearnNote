@@ -1,8 +1,9 @@
 # SubclassesGetter
 
+### 获取当前 class的所有子类
 
-
-```
+```objc
+// 1231
 + (NSArray *)zl_subclasses {
     int numClasses = objc_getClassList(NULL, 0); // 获取当前所有类的个数
     

@@ -1,0 +1,2 @@
+NS_ENUM枚举项的值为NSInteger，NS_OPTIONS枚举项的值为NSUInteger；
+NS_ENUM定义通用枚举，NS_OPTIONS定义位移枚举;
