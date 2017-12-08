@@ -30,3 +30,20 @@
     return result;
 }
 ```
+
+# property
+```objc 
+- (void)setName:(NSString *)name {
+    if(_name != name) {
+        [_name release];
+        _name = [_name retain];
+    }
+}
+
+- (void)setName:(NSString *)name {
+    if(_name != name) {
+        [_name release];
+        _name = [_name copy];
+    }
+}
+```

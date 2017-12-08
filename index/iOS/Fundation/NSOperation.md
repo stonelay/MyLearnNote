@@ -27,7 +27,7 @@ NSOperation 是对 GCD 中的 block 进行的封装，是一个 可执行的任�
 1. 就需要自定义 NSOperation 的子类。
 2. 或者 使用 NSOperationQueue。
 
-NSOperationQueue 分为主队列 非主队列。
+NSOperationQueue 分为主队列 非主队列。主队列可以用 NSOperationQueue.mainQueue 取得。
 
 对于非主队列来说，一旦一个 NSOperation 被放入其中，那这个NSOperation 一定是并发执行的。因为 NSOperationQueue 会为每一个 NSOperation 创建线程并调用它的 start 方法。
 
