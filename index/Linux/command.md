@@ -14,11 +14,5 @@ ps -u [username]
 
 
 
-1. taomeng notice
-2. yihaoqian
-3. shangshangqian, 用途选择
-4. caifuguanjia
-5. zhengxin
-
 
 
