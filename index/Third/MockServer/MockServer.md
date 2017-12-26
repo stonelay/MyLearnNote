@@ -35,3 +35,36 @@ requestIsCacheEquivalent:toRequest: 用于判断你的自定义reqeust是否相�
 - (NSCachedURLResponse *)cachedResponse;
 
 6. startLoading stopLoading
+
+7. NSURLProtocolClient
+通过NSURLProtocolClient 将事件传给 请求的代理。
+```
+@protocol NSURLProtocolClient <NSObject>
+
+//请求重定向
+- (void)URLProtocol:(NSURLProtocol *)protocol wasRedirectedToRequest:(NSURLRequest *)request redirectResponse:(NSURLResponse *)redirectResponse;
+
+// 响应缓存是否合法
+- (void)URLProtocol:(NSURLProtocol *)protocol cachedResponseIsValid:(NSCachedURLResponse *)cachedResponse;
+
+//刚接收到Response信息
+- (void)URLProtocol:(NSURLProtocol *)protocol didReceiveResponse:(NSURLResponse *)response cacheStoragePolicy:(NSURLCacheStoragePolicy)policy;
+
+//数据加载成功
+- (void)URLProtocol:(NSURLProtocol *)protocol didLoadData:(NSData *)data;
+
+//数据完成加载
+- (void)URLProtocolDidFinishLoading:(NSURLProtocol *)protocol;
+
+//数据加载失败
+- (void)URLProtocol:(NSURLProtocol *)protocol didFailWithError:(NSError *)error;
+
+//为指定的请求启动验证
+- (void)URLProtocol:(NSURLProtocol *)protocol didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge;
+
+//为指定的请求取消验证
+- (void)URLProtocol:(NSURLProtocol *)protocol didCancelAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge;
+
+@end
+
+```
