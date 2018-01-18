@@ -43,7 +43,7 @@ task.identifer为key 新建AFURLSessionManagerTaskDelegate 存在mutableTaskDele
 url_session_manager_processing_queue() 这是用来解析 返回的 response 的 并行队列。
 解析完后，提交给completequeue
 
-
+4. swzzling af_resume方法， 在resume 和 suspend 的时候， 会检查是否
 
 
 

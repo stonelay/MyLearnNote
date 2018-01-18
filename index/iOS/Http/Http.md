@@ -31,3 +31,7 @@ Last-Modified 的问题在于它的精度在秒(s)的级别，比较适合不太
 是最基础的浏览器缓存处理，表示资源在一定时间内从浏览器的缓存中获取资源，不需要请求服务器获取资源，从而达到快速获取资源，缓解服务器压力的目的。
 
 在response的header中的格式为：Expires: Thu, 01 Dec 1994 16:00:00 GMT （必须是GMT格式）
+
+## max-age
+ Cache-Control中设置资源在本地缓存时间的一个值，单位为：秒(s)，其他值还有private、no-cache、must-revalidate等
+
