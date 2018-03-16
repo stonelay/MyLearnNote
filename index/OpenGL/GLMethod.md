@@ -2,7 +2,8 @@
 
 ## glUniform1i (GLint location, GLint x)
 location 句柄
-x 代表第几层
+x 代表第几层  对应的  GL_TEXTURE0
+uniform采样器 对应响应的纹理
 GLuint location = glGetUniformLocation(self.myProgram, "colorMap1");
 glUniform1i(location, 1);
 
