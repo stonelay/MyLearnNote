@@ -233,3 +233,16 @@ Socket编程 (异步通讯,解决Tcp粘包)
 3.(1)我是liger_zql我是liger_zql
 
 通过以上三种情况，显然2、3都不是我们想要的结果。那么如何处理这中情况呢？
+
+
+
+
+
+
+
+
+http://139.196.210.150:12345/orderDetail.html?
+type=1&orderId=201805231729496qehx&token=6ef499648f3e4830980a6c6240899000&account=17606522293
+
+http://139.196.210.150:12345/orderDetail.html?
+type=1&orderId=201805211448322p8mj&token=5dd667cacf5e4a378b1ad0d820a73302&account=15990027607
