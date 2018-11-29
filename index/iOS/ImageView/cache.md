@@ -1,0 +1,10 @@
+## cache
+
+* NSCache
+
+NSCache的使用很方便，提供了类似可变字典的使用方式，但它比可变字典更适用于实现缓存，最重要的原因为NSCache是线程安全的，使用NSMutableDictionary自定义实现缓存时需要考虑加锁和释放锁，NSCache已经帮我们做好了这一步。其次，在内存不足时NSCache会自动释放存储的对象，不需要手动干预，如果是自定义实现需要监听内存状态然后做进一步的删除对象的操作。还有一点就是NSCache的键key不会被复制，所以key不需要实现NSCopying协议。
+
+上面讲解的三点就是NSCache相比于NSMutableDictionary实现缓存功能的优点，在需要实现缓存时应当优先考虑使用NSCache。
+
+
+
