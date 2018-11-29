@@ -31,6 +31,9 @@ dispatch_get_global_queue(identifier, 0)
 用户队列:串行或并列队列 
 创建 用户队列
 ```
+// 并发是一次处理很多事情，并行是同时做很多事情。
+// 强调一下，同时 和 同一时刻的区别
+
 dispatch_queue_create(label, attr);
 //DISPATCH_QUEUE_CONCURRENT 并发 
 //DISPATCH_QUEUE_SERIAL 串行
