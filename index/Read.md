@@ -18,7 +18,9 @@ git push origin dev/3.18.0:feature/t
 https://gems.ruby-china.com/
 
 
-
+git fetch origin master:tmp
+git diff tmp
+git merge tmp
 
 
 
@@ -31,3 +33,7 @@ file:///Users/zhanglei/Library/Developer/CoreSimulator/Devices/75DA7503-0974-4D5
 	__SECURE = 1,
 	iv = SeMGkRyUJ8IY/T13k7fWHg==
 } [via HBLog]
+
+
+
+[[NSString alloc] initWithData:[NSJSONSerialization dataWithJSONObject:result options:NSJSONWritingPrettyPrinted error:nil] encoding:NSUTF8StringEncoding];
