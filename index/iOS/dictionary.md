@@ -48,3 +48,18 @@ __NSArrayM的结构定义为:
 # NSSet
 
 hash表，相同的对象 只保存一份
+
+
+# NSMapTable是更广泛意义上的NSDictionary。和NSDictionary/NSMutableDictionary相比具有如下特性：
+1. NSDictionary/NSMutableDictionary会复制keys并且通过强引用values来实现存储；
+2. NSMapTable是可变的；
+3. NSMapTable可以通过弱引用来持有keys和values，所以当key或者value被deallocated的时候，所存储的实体也会被移除；
+4. NSMapTable可以在添加value的时候对value进行复制；
+
+# NSSet，NSHashTable
+具有以下特性
+1. NSHashTable是可变的，它没有不可变版本。
+2. 它可以持有元素的弱引用，而且在对象被销毁后能正确地将其移除。而这一点在NSSet是做不到的。
+3. 它的成员可以在添加时被拷贝。
+4. 它的成员可以使用指针来标识是否相等及做hash检测。
+5. 它可以包含任意指针，其成员没有限制为对象。我们可以配置一个NSHashTable实例来操作任意的指针，而不仅仅是对象。
