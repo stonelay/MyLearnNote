@@ -1,0 +1,633 @@
+Last login: Fri Jan 11 21:32:01 on ttys015
+➜  未命名文件夹 sudo tcpdump -n -i en1 dst 58.222.52.249 and tcp>>a.capture
+Password:
+tcpdump: verbose output suppressed, use -v or -vv for full protocol decode
+listening on en1, link-type EN10MB (Ethernet), capture size 262144 bytes
+^C4 packets captured
+529 packets received by filter
+0 packets dropped by kernel
+➜  未命名文件夹 sudo tcpdump -n -i en1 dst 58.222.52.249 and tcp >>a.capture
+tcpdump: verbose output suppressed, use -v or -vv for full protocol decode
+listening on en1, link-type EN10MB (Ethernet), capture size 262144 bytes
+^C0 packets captured
+724 packets received by filter
+0 packets dropped by kernel
+➜  未命名文件夹 sudo tcpdump -n -i en1 dst 58.222.52.249 and tcp
+tcpdump: verbose output suppressed, use -v or -vv for full protocol decode
+listening on en1, link-type EN10MB (Ethernet), capture size 262144 bytes
+21:48:37.391321 IP 172.17.33.7.53272 > 58.222.52.249.443: Flags [P.], seq 1998758725:1998758771, ack 2650297288, win 2227, options [nop,nop,TS val 1770899115 ecr 16795977], length 46
+21:48:37.392737 IP 172.17.33.7.53272 > 58.222.52.249.443: Flags [P.], seq 46:96, ack 1, win 2227, options [nop,nop,TS val 1770899116 ecr 16795977], length 50
+21:48:37.409653 IP 172.17.33.7.53272 > 58.222.52.249.443: Flags [.], ack 47, win 2226, options [nop,nop,TS val 1770899132 ecr 16849112], length 0
+21:48:37.410857 IP 172.17.33.7.53272 > 58.222.52.249.443: Flags [.], ack 265, win 2224, options [nop,nop,TS val 1770899133 ecr 16849113], length 0
+^C
+4 packets captured
+2501 packets received by filter
+0 packets dropped by kernel
+➜  未命名文件夹 sudo tcpdump -n -i en1 dst 58.222.52.249 or src 172.17.33.7 and tcp
+tcpdump: verbose output suppressed, use -v or -vv for full protocol decode
+listening on en1, link-type EN10MB (Ethernet), capture size 262144 bytes
+21:49:33.816534 IP 172.17.33.7.49572 > 203.119.218.69.443: Flags [.], ack 1037340091, win 4096, length 0
+21:49:35.363598 IP 172.17.33.7.49572 > 203.119.218.69.443: Flags [.], ack 1, win 4096, length 0
+21:49:36.410296 IP 172.17.33.7.49572 > 203.119.218.69.443: Flags [.], ack 1, win 4096, length 0
+21:49:36.764308 IP 172.17.33.7.53289 > 122.225.67.226.80: Flags [P.], seq 870904512:870904785, ack 1996849520, win 4096, length 273: HTTP: GET /upload/face/1810/27/4f755bb9cd6bf6f33be654e0ba3040d7.jpg!60x60.jpg HTTP/1.1
+21:49:36.770839 IP 172.17.33.7.53289 > 122.225.67.226.80: Flags [.], ack 2282, win 4083, length 0
+21:49:37.478962 IP 172.17.33.7.49572 > 203.119.218.69.443: Flags [.], ack 1, win 4096, length 0
+21:49:38.527472 IP 172.17.33.7.49572 > 203.119.218.69.443: Flags [.], ack 1, win 4096, length 0
+21:49:39.574287 IP 172.17.33.7.49572 > 203.119.218.69.443: Flags [.], ack 1, win 4096, length 0
+21:49:41.121553 IP 172.17.33.7.49572 > 203.119.218.69.443: Flags [.], ack 1, win 4096, length 0
+^C
+9 packets captured
+422 packets received by filter
+0 packets dropped by kernel
+➜  未命名文件夹 sudo tcpdump -n -i en1 dst 58.222.52.249 or dst 172.17.33.7 and tcp
+tcpdump: verbose output suppressed, use -v or -vv for full protocol decode
+listening on en1, link-type EN10MB (Ethernet), capture size 262144 bytes
+21:49:53.557145 IP 203.119.218.69.443 > 172.17.33.7.49572: Flags [.], ack 3320147010, win 358, length 0
+21:49:54.604221 IP 203.119.218.69.443 > 172.17.33.7.49572: Flags [.], ack 1, win 358, length 0
+21:49:55.651159 IP 203.119.218.69.443 > 172.17.33.7.49572: Flags [.], ack 1, win 358, length 0
+21:50:06.770211 IP 122.225.67.226.80 > 172.17.33.7.53289: Flags [.], seq 1996853933:1996855393, ack 870905331, win 78, length 1460: HTTP: HTTP/1.1 200 OK
+21:50:06.770381 IP 122.225.67.226.80 > 172.17.33.7.53289: Flags [P.], seq 1460:2620, ack 1, win 78, length 1160: HTTP
+21:50:06.790120 IP 183.136.239.57.80 > 172.17.33.7.53301: Flags [S.], seq 4208861801, ack 3130477036, win 2920, options [mss 1460,nop,wscale 9], length 0
+21:50:06.796476 IP 183.136.239.57.80 > 172.17.33.7.53301: Flags [.], ack 283, win 8, length 0
+21:50:06.796843 IP 183.136.239.57.80 > 172.17.33.7.53301: Flags [.], ack 377, win 8, length 0
+21:50:06.797307 IP 183.136.239.57.80 > 172.17.33.7.53301: Flags [.], ack 1837, win 14, length 0
+21:50:06.801717 IP 183.136.239.57.80 > 172.17.33.7.53301: Flags [.], ack 3297, win 20, length 0
+21:50:06.803494 IP 183.136.239.57.80 > 172.17.33.7.53301: Flags [.], ack 4757, win 25, length 0
+21:50:06.804698 IP 183.136.239.57.80 > 172.17.33.7.53301: Flags [.], ack 5009, win 27, length 0
+21:50:06.804700 IP 183.136.239.57.80 > 172.17.33.7.53301: Flags [P.], seq 1:198, ack 5009, win 27, length 197: HTTP: HTTP/1.1 200 OK
+21:50:08.166441 IP 172.17.33.7.53272 > 58.222.52.249.443: Flags [P.], seq 1998758821:1998758867, ack 2650297552, win 2227, options [nop,nop,TS val 1770989644 ecr 16849113], length 46
+21:50:08.166809 IP 172.17.33.7.53272 > 58.222.52.249.443: Flags [P.], seq 46:96, ack 1, win 2227, options [nop,nop,TS val 1770989644 ecr 16849113], length 50
+21:50:08.182850 IP 58.222.52.249.443 > 172.17.33.7.53272: Flags [.], ack 96, win 35, options [nop,nop,TS val 16939885 ecr 1770989644], length 0
+21:50:08.183561 IP 58.222.52.249.443 > 172.17.33.7.53272: Flags [P.], seq 1:47, ack 96, win 35, options [nop,nop,TS val 16939886 ecr 1770989644], length 46
+21:50:08.183602 IP 172.17.33.7.53272 > 58.222.52.249.443: Flags [.], ack 47, win 2226, options [nop,nop,TS val 1770989660 ecr 16939886], length 0
+21:50:08.184173 IP 58.222.52.249.443 > 172.17.33.7.53272: Flags [P.], seq 47:265, ack 96, win 35, options [nop,nop,TS val 16939886 ecr 1770989644], length 218
+21:50:08.184331 IP 172.17.33.7.53272 > 58.222.52.249.443: Flags [.], ack 265, win 2224, options [nop,nop,TS val 1770989661 ecr 16939886], length 0
+21:50:12.727494 IP 58.60.9.100.443 > 172.17.33.7.53297: Flags [R], seq 4147724242, win 0, length 0
+21:50:12.727660 IP 58.60.9.100.443 > 172.17.33.7.53297: Flags [R], seq 4147724242, win 0, length 0
+21:50:16.657230 IP 216.58.203.10.443 > 172.17.33.7.53276: Flags [P.], seq 3141757116:3141757179, ack 1207194853, win 247, options [nop,nop,TS val 2525672382 ecr 1770758750], length 63
+21:50:16.657394 IP 216.58.203.10.443 > 172.17.33.7.53276: Flags [F.], seq 63, ack 1, win 247, options [nop,nop,TS val 2525672382 ecr 1770758750], length 0
+21:50:16.694254 IP 216.58.203.10.443 > 172.17.33.7.53276: Flags [R], seq 3141757180, win 0, length 0
+21:50:16.768081 IP 122.225.67.226.80 > 172.17.33.7.53289: Flags [.], seq 2620:4080, ack 274, win 81, length 1460: HTTP: HTTP/1.1 200 OK
+21:50:16.768089 IP 122.225.67.226.80 > 172.17.33.7.53289: Flags [P.], seq 4080:5072, ack 274, win 81, length 992: HTTP
+21:50:18.090984 IP 183.136.239.168.80 > 172.17.33.7.53299: Flags [F.], seq 3417806308, ack 529026693, win 8, length 0
+^C
+28 packets captured
+1484 packets received by filter
+0 packets dropped by kernel
+➜  未命名文件夹 sudo tcpdump -n -i en1 dst 58.222.52.249 or (dst 172.17.33.7 and src 58.222.52.249) and tcp
+zsh: number expected
+➜  未命名文件夹 sudo tcpdump -n -i en1 dst 58.222.52.249 or ( dst 172.17.33.7 and src 58.222.52.249 ) and tcp
+zsh: unknown file attribute:
+➜  未命名文件夹 sudo tcpdump -n -i en1 dst 58.222.52.249 or dst 172.17.33.7 and tcp >> a.cap
+tcpdump: verbose output suppressed, use -v or -vv for full protocol decode
+listening on en1, link-type EN10MB (Ethernet), capture size 262144 bytes
+^C39666 packets captured
+93857 packets received by filter
+0 packets dropped by kernel
+➜  未命名文件夹 sudo tcpdump -n en1 dst 58.222.52.249 or dst 172.17.33.7 and tcp >> a.cap
+Password:
+Sorry, try again.
+Password:
+tcpdump: data link type PKTAP
+tcpdump: verbose output suppressed, use -v or -vv for full protocol decode
+listening on pktap, link-type PKTAP (Apple DLT_PKTAP), capture size 262144 bytes
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+pktap_filter_packet: pcap_add_if_info(en1, 1) failed: pcap_if_info_set_add: pcap_compile_nopcap() failed
+^C0 packets captured
+526 packets received by filter
+0 packets dropped by kernel
+➜  未命名文件夹 sudo tcpdump -n -i en1 dst 58.222.52.249 or dst 172.17.33.7 and tcp -w a.cap
+tcpdump: listening on en1, link-type EN10MB (Ethernet), capture size 262144 bytes
+^C352 packets captured
+1515 packets received by filter
+0 packets dropped by kernel
+➜  未命名文件夹 sudo tcpdump -n -i en1 dst 58.222.52.249 or dst 172.17.33.7 -w a.cap
+Password:
+tcpdump: listening on en1, link-type EN10MB (Ethernet), capture size 262144 bytes
+^C597 packets captured
+1561 packets received by filter
+0 packets dropped by kernel
+➜  未命名文件夹 sudo tcpdump -n -i en1 dst 58.222.52.249 or dst 172.17.33.7 -w a.cap
+tcpdump: listening on en1, link-type EN10MB (Ethernet), capture size 262144 bytes
+^C851 packets captured
+2116 packets received by filter
+0 packets dropped by kernel
+➜  未命名文件夹 sudo tcpdump -n -i en1 dst 58.222.52.249 or dst 172.17.33.7 -w a.cap
+tcpdump: listening on en1, link-type EN10MB (Ethernet), capture size 262144 bytes
+^C530 packets captured
+1361 packets received by filter
+0 packets dropped by kernel
+➜  未命名文件夹 sudo tcpdump -n -i en1 dst 58.222.52.249 -w a.cap
+tcpdump: listening on en1, link-type EN10MB (Ethernet), capture size 262144 bytes
+^C0 packets captured
+2098 packets received by filter
+0 packets dropped by kernel
+➜  未命名文件夹 sudo tcpdump -n -i en1 dst 121.14.254.249 -w a.cap
+tcpdump: listening on en1, link-type EN10MB (Ethernet), capture size 262144 bytes
+^C37 packets captured
+2291 packets received by filter
+0 packets dropped by kernel
+➜  未命名文件夹 sudo tcpdump -n -i en1 dst 121.14.254.249 or src 121.14.254.249 -w a.cap
+tcpdump: listening on en1, link-type EN10MB (Ethernet), capture size 262144 bytes
+^C0 packets captured
+4040 packets received by filter
+0 packets dropped by kernel
+➜  未命名文件夹 sudo tcpdump -n -i en1 dst 58.222.52.249 or src 58.222.52.249 -w a.cap
+tcpdump: listening on en1, link-type EN10MB (Ethernet), capture size 262144 bytes
+^C95 packets captured
+4828 packets received by filter
+0 packets dropped by kernel
+➜  未命名文件夹 sudo tcpdump -n -i en1 dst 58.222.52.249 or src 58.222.52.249 -w a.cap
+tcpdump: listening on en1, link-type EN10MB (Ethernet), capture size 262144 bytes
+^C111 packets captured
+1726 packets received by filter
+0 packets dropped by kernel
+➜  未命名文件夹 sudo tcpdump -n -i en1 dst 183.136.239.168  or src 183.136.239.168 -w a.cap
+Password:
+tcpdump: listening on en1, link-type EN10MB (Ethernet), capture size 262144 bytes
+c^C35 packets captured
+669 packets received by filter
+0 packets dropped by kernel
+➜  未命名文件夹 sudo tcpdump -n -i en1 dst 183.136.239.168  or src 183.136.239.168 -w a.cap
+Password:
+tcpdump: listening on en1, link-type EN10MB (Ethernet), capture size 262144 bytes
+^C17983 packets captured
+1550698 packets received by filter
+0 packets dropped by kernel
+➜  未命名文件夹
