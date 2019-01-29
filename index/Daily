@@ -1,2 +1,9 @@
 config |= kReset;
 config &= ~kReset;
+
+
+git
+HBWebViewImageCache
+shell grep
+block
+githug
