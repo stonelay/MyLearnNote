@@ -39,4 +39,7 @@ git checkout -b dev
 git branch dev
 git checkout dev
 
+## 修改最近一次的commit 信息
+git commit --amend
+
 
