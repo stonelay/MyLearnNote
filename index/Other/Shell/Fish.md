@@ -36,3 +36,9 @@ $ 行尾
 ^$ 空行
 \b 词首词尾
 \B 非词首词尾
+
+
+
+
+https://gems.ruby-china.com/
+https://rubygems.org/
