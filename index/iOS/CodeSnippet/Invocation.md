@@ -31,4 +31,14 @@
     NSLog(@"%ld", (long)returnValue);
 ```
 
+```
+    NSMethodSignature *signature = [NSMethodSignature signatureWithObjCTypes:[@"v@:" UTF8String]];
+    NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:signature];
+    Class superCls = [self class];
+    Method superForwardMethod = class_getInstanceMethod(superCls, @selector(doPrint));
+    void (*superForwardIMP)(id, SEL, NSInvocation *);
+    superForwardIMP = (void (*)(id, SEL, NSInvocation *))method_getImplementation(superForwardMethod);
+    superForwardIMP(self, @selector(doPrinta), invocation);
+```
+
 
