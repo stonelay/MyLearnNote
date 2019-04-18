@@ -32,13 +32,28 @@
 ```
 
 ```
+    
     NSMethodSignature *signature = [NSMethodSignature signatureWithObjCTypes:[@"v@:" UTF8String]];
+    // NSMethodSignature *signature = [[self class] instanceMethodSignatureForSelector:@selector(doPrint)];
     NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:signature];
     Class superCls = [self class];
     Method superForwardMethod = class_getInstanceMethod(superCls, @selector(doPrint));
     void (*superForwardIMP)(id, SEL, NSInvocation *);
     superForwardIMP = (void (*)(id, SEL, NSInvocation *))method_getImplementation(superForwardMethod);
     superForwardIMP(self, @selector(doPrinta), invocation);
+```
+
+```
+// 获得签名 v@:
+    NSMethodSignature *signature = [[self class] instanceMethodSignatureForSelector:@selector(doPrint)];
+    
+    // self class 必须有doPrint方法
+//    NSMethodSignature *signature = [NSMethodSignature signatureWithObjCTypes:[@"v@:" UTF8String]];
+    NSInvocation *forwardInv= [NSInvocation invocationWithMethodSignature:signature];
+    [forwardInv setTarget:self];
+    [forwardInv setSelector:@selector(doPrint)];
+//    [forwardInv setArgument:&invocation atIndex:2];
+    [forwardInv invoke];
 ```
 
 
