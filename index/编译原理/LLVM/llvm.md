@@ -46,3 +46,9 @@ LLVM IR 有三种定义形式：上面示例中的文本形式；内存中的数
 llvm-as 工具可以将 .ll 文件 (文本形式的 IR) 转换为 .bc 文件 (位代码格式的 IR)。llvm-dis 工具可以将 .bc 文件转换为 .ll 文件。
 
 优化器针对 IR 进行优化，而不用去管前端输入的是何种编程语言，后端生成的是何种目标平台的指令。LLVM IR 在设计时必须考虑到前端能够容易生成 IR，并且支持针对真实的目标平台执行重要的优化。
+
+
+IR的特点
+  引用官方文档对IR的描述: LLVM is a Static Single Assignment (SSA) based representation that provides type safety, low-level operations, flexibility, and the capability of representing ‘all’ high-level languages cleanly. 作为一门语言IR有如下特点: 基于SSA, 类型安全, 提供低层级操作与支持所有高级语言.
+
+

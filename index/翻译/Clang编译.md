@@ -10,9 +10,11 @@ Clang前段
 4. CodeGen - （Intermediate Representation，简称IR）IR中间代码生成
 
 llvm中段
+
 5. Optimize - 优化IR
 
-llvm后段
+llvm后段     
+
 6. LLVM Bitcode - 生成字节码
 7. Assemble - 生成Target相关汇编
 8. Link生成Executable
