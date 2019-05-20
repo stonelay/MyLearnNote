@@ -55,3 +55,13 @@ void *p = (__bridge_retained void *)obj;
 2. __bridge_transfer:常用在讲CF对象转换成OC对象时，将CF对象的所有权交给OC对象，此时ARC就能自动管理该内存;
 3. __bridge_retained:（与__bridge_transfer相反）常用在将OC对象转换成CF对象时，将OC对象的所有权交给CF对象来管理;
 
+
+
+
+
+
+
+
+
+
+
